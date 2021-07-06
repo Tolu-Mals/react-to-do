@@ -1,13 +1,94 @@
-body {
+* {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #333;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+  /* padding-left: 70px; */
+}
+
+li {
+  margin-bottom: 8px;
+  padding: 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-radius: 3px;
+}
+
+
+.App {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input, button {
+  padding: 10px;
+}
+
+
+button.close {
+  font-size: 24px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: rgb(218, 49, 49);
+}
+
+.container {
+  width: 500px;
+  background: rgb(226, 226, 226);
+  padding: 16px;
+  border-radius: 5px;
+}
+
+.container h1 {
+  margin-bottom: 16px;
+  color: rgb(82, 82, 82);
+}
+
+.add-to-do-form {
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.add-to-do-form input, button {
+  border: none;
+}
+
+.add-to-do-form input:focus, button:focus {
+  outline: none;
+}
+
+
+
+.add-to-do-form input {
+  width: 80%;
+}
+
+.add-to-do-form button {
+  background-color: rgb(84, 170, 84);
+  width: 20%;
+  color: #fff;
+  cursor: pointer;
 }
