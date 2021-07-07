@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext, useState, useEffect } from 'react';
 import uuid from 'uuid/v1';
 
 export const ToDoContext = createContext();
@@ -6,11 +6,13 @@ export const ToDoContext = createContext();
 
 const ToDoItemsContextProvider = (props) => {
 
-    const [ items, setItems ] = useState([
-        { task: 'Create low fidelity wireframes', id: uuid()},
-        { task: 'Create branding assets', id: uuid()},
-        { task: 'Implement landing page design', id: uuid()}
-    ]);
+    const initalItems = JSON.parse(localStorage.getItem("items")) || [];
+
+    const [ items, setItems ] = useState(initalItems);
+    
+    useEffect(()=> {
+        localStorage.setItem("items", JSON.stringify(items));
+    }, [items]);
 
     const addToDoItem = (task) => {
         setItems([...items, {task, id: uuid()}]);
