@@ -1,6 +1,6 @@
 # Simple To-Do List App in ReactJS
 
-This is me flexing my react muscles :) after covering some of the basics of React. It's a simple to-do app that allows you to add to do items and the remove them once you've done what you're supposed to.
+This is me flexing my react muscles :) after covering some of the basics of React. It's a simple to-do app that allows you to add to do items and then remove them once you've done what you're supposed to.
 
 Here's how it looks like:
 
