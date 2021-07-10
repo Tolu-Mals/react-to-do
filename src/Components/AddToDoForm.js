@@ -10,8 +10,10 @@ const AddToDoForm = () => {
 
    const formSubmit = (e) =>{
         e.preventDefault();
-        addToDoItem(task);
-        setTask("");
+        if(task){
+            addToDoItem(task);  
+            setTask(""); 
+        } 
    }
 
 
@@ -23,4 +25,4 @@ const AddToDoForm = () => {
     );
 }
 
-export default AddToDoForm
+export default AddToDoForm;
